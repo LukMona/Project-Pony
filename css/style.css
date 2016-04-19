@@ -343,3 +343,39 @@ header {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
 }
+
+.cloud-right {
+  animation-name: cloudMovingRight;
+  animation-duration: 4s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes cloudMovingRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 0);
+  }
+}
+
+.cloud-left {
+  animation-name: cloudMovingLeft;
+  animation-duration: 4s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes cloudMovingLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 0);
+  }
+}
