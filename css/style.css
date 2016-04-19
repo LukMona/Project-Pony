@@ -83,10 +83,11 @@ header {
 .img {
   width: 250px;
   float: right;
+  z-index: 1000;
 }
 
 .col-3 {
-  padding-bottom: 120px;
+  padding-bottom: 1200px;
 }
 
 .container-1 {
@@ -110,7 +111,7 @@ header {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   position: absolute;
-  z-index: 2;
+  z-index: 20;
 }
 
 .container-1 .cloud-1 .cloud-bun-1 {
@@ -122,7 +123,7 @@ header {
   height: 5em;
   border-radius: 50%;
   display: block;
-  z-index: 1;
+  z-index: 10;
 }
 
 .container-1 .cloud-1 .cloud-bun-2 {
@@ -134,7 +135,7 @@ header {
   height: 8em;
   border-radius: 50%;
   display: block;
-  z-index: 1;
+  z-index: 10;
 }
 
 .container-1 .cloud-1 .shadow-1 {
@@ -142,7 +143,7 @@ header {
   top: 115px;
   left: 40px;
   width: 10em;
-  z-index: 1;
+  z-index: 10;
   box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
@@ -172,7 +173,7 @@ header {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   position: absolute;
-  z-index: 2;
+  z-index: 20;
   left: 20px;
 }
 
@@ -185,7 +186,7 @@ header {
   height: 20px;
   border-radius: 50%;
   display: block;
-  z-index: 1;
+  z-index: 10;
 }
 
 .container-3 .cloud-3 .cloud-bun-2 {
@@ -197,7 +198,7 @@ header {
   height: 40px;
   border-radius: 50%;
   display: block;
-  z-index: 1;
+  z-index: 10;
 }
 
 .container-3 .cloud-3 .shadow-3 {
@@ -205,7 +206,7 @@ header {
   top: 33px;
   left: 33px;
   width: 3em;
-  z-index: 1;
+  z-index: 10;
   box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
@@ -235,20 +236,20 @@ header {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   position: absolute;
-  z-index: 2;
+  z-index: 20;
   left: 33px;
 }
 
 .container-2 .cloud-2 .cloud-bun-1 {
   top: -12px;
-  left: 53px;
+  left: 61px;
   position: absolute;
   background-color: #f2f9fe;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   display: block;
-  z-index: 1;
+  z-index: 10;
 }
 
 .container-2 .cloud-2 .cloud-bun-2 {
@@ -260,7 +261,7 @@ header {
   height: 60px;
   border-radius: 50%;
   display: block;
-  z-index: 1;
+  z-index: 10;
 }
 
 .container-2 .cloud-2 .shadow-3 {
@@ -268,7 +269,7 @@ header {
   top: 64px;
   left: 59px;
   width: 4em;
-  z-index: 1;
+  z-index: 10;
   box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
@@ -302,7 +303,7 @@ header {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   position: absolute;
-  z-index: 2;
+  z-index: 1000;
   left: 33px;
 }
 
@@ -315,7 +316,7 @@ header {
   height: 200px;
   border-radius: 50%;
   display: block;
-  z-index: 1;
+  z-index: 900;
 }
 
 .navigation-cloud .cloud-nav .cloud-bun-2 {
@@ -327,7 +328,7 @@ header {
   height: 100px;
   border-radius: 50%;
   display: block;
-  z-index: 1;
+  z-index: 900;
 }
 
 .navigation-cloud .cloud-nav .shadow-3 {
@@ -335,7 +336,7 @@ header {
   top: 200px;
   left: 97px;
   width: 23em;
-  z-index: 1;
+  z-index: 900;
   box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
@@ -346,7 +347,7 @@ header {
 
 .cloud-right {
   animation-name: cloudMovingRight;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-delay: 0;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -364,7 +365,7 @@ header {
 
 .cloud-left {
   animation-name: cloudMovingLeft;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-delay: 0;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -378,4 +379,144 @@ header {
   100% {
     transform: translate(20px, 0);
   }
+}
+
+.cloud-up-1 {
+  margin: 27px 4px 20px;
+}
+
+.cloud-down-1 {
+  margin: 11px 192px 20px;
+}
+
+.cloud-down-1 .cloud-3 .base {
+  z-index: 9;
+}
+
+.cloud-down-1 .cloud-3 .cloud-bun-1 {
+  z-index: 8;
+}
+
+.cloud-down-1 .cloud-3 .cloud-bun-2 {
+  z-index: 8;
+}
+
+.cloud-down-1 .cloud-3 .shadow-3 {
+  z-index: 8;
+}
+
+.cloud-up-2 {
+  margin: 98px 128px 20px;
+}
+
+.cloud-down-2 {
+  margin: 10px 200px 20px;
+}
+
+.cloud-down-2 .cloud-3 .base {
+  z-index: 9;
+}
+
+.cloud-down-2 .cloud-3 .cloud-bun-1 {
+  z-index: 8;
+}
+
+.cloud-down-2 .cloud-3 .cloud-bun-2 {
+  z-index: 8;
+}
+
+.cloud-down-2 .cloud-3 .shadow-3 {
+  z-index: 8;
+}
+
+.cloud-down-3 {
+  margin: 100px 88px 200px;
+}
+
+.cloud-down-3 .cloud-2 .base {
+  z-index: 9;
+}
+
+.cloud-down-3 .cloud-2 .cloud-bun-1 {
+  z-index: 8;
+}
+
+.cloud-down-3 .cloud-2 .cloud-bun-2 {
+  z-index: 8;
+}
+
+.cloud-down-3 .cloud-2 .shadow-3 {
+  z-index: 8;
+}
+
+.cloud-down-4 {
+  margin: 244px 200px 200px;
+}
+
+.cloud-down-4 .cloud-1 .base {
+  z-index: 9;
+}
+
+.cloud-down-4 .cloud-1 .cloud-bun-1 {
+  z-index: 8;
+}
+
+.cloud-down-4 .cloud-1 .cloud-bun-2 {
+  z-index: 8;
+}
+
+.cloud-down-4 .cloud-1 .shadow-3 {
+  z-index: 8;
+}
+
+.cloud-up-3 {
+  margin: -62px 32px 100px;
+}
+
+.cloud-down-5 {
+  margin: 22px 55px 200px;
+}
+
+.cloud-down-5 .cloud-2 .base {
+  z-index: 9;
+}
+
+.cloud-down-5 .cloud-2 .cloud-bun-1 {
+  z-index: 8;
+}
+
+.cloud-down-5 .cloud-2 .cloud-bun-2 {
+  z-index: 8;
+}
+
+.cloud-down-5 .cloud-2 .shadow-3 {
+  z-index: 8;
+}
+
+.cloud-down-6 {
+  margin: -90px 180px 200px;
+}
+
+.cloud-down-6 .cloud-2 .base {
+  z-index: 9;
+}
+
+.cloud-down-6 .cloud-2 .cloud-bun-1 {
+  z-index: 8;
+}
+
+.cloud-down-6 .cloud-2 .cloud-bun-2 {
+  z-index: 8;
+}
+
+.cloud-down-6 .cloud-2 .shadow-3 {
+  z-index: 8;
+}
+
+.cloud-up-4 {
+  margin: -20px 180px 200px;
+}
+
+.cloud-down-7 {
+  margin: -175px 40px 20px;
 }
