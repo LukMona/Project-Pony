@@ -8,7 +8,6 @@
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
-  height: 95vh;
 }
 
 .grid-container .row:after, .grid-container .row:before {
@@ -71,9 +70,9 @@
 }
 
 @font-face {
-  font-family: 'henny_pennyregular';
-  src: url("../fonts/hennypenny-regular-webfont.eot");
-  src: url("../fonts/hennypenny-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/hennypenny-regular-webfont.woff2") format("woff2"), url("../fonts/hennypenny-regular-webfont.woff") format("woff"), url("../fonts/hennypenny-regular-webfont.ttf") format("truetype"), url("../fonts/hennypenny-regular-webfont.svg#henny_pennyregular") format("svg");
+  font-family: 'celestia_reduxmedium';
+  src: url("../fonts/celestiamediumredux1.55.eot");
+  src: url("../fonts/celestiamediumredux1.55.eot?#iefix") format("embedded-opentype"), url("../fonts/celestiamediumredux1.55.woff2") format("woff2"), url("../fonts/celestiamediumredux1.55.woff") format("woff"), url("../fonts/celestiamediumredux1.55.ttf") format("truetype"), url("../fonts/celestiamediumredux1.55.svg#celestia_reduxmedium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -607,4 +606,19 @@ header {
 
 .cloud-up-7 {
   margin: 742px 0 0 -101px;
+}
+
+.section1 .col-2 {
+  background-color: #87cefa;
+  height: 300px;
+}
+
+.col-10 {
+  background-color: #E2F4FE;
+  height: 300px;
+}
+
+.textarea-twilightsparkle .text-header {
+  font-family: "celestia_reduxmedium";
+  font-size: 30px;
 }
