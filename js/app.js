@@ -98,7 +98,8 @@ $(function(){
       index--;
 
       ul.animate({
-        left: -(widthPhoto*index)
+        left: -(widthPhoto*index),
+        opacity: 0,
       }, {
         duration: 0,
         complete: function moveToLast(){
@@ -109,12 +110,14 @@ $(function(){
         }
       });
 
+      ul.animate({
+        opacity: 1
+      }, 1500)
+
       function ponyPuff(){
 
         var pony = $(".ponys").eq(index);
         var pony1 = $(".ponys").eq(index-1)
-        console.log(pony);
-        console.log(pony1);
 
         $(pony).auderoSmokeEffect({
           imagePath: "img/cloud.png",

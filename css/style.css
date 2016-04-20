@@ -367,6 +367,7 @@ header {
 #prevPony, #nextPony {
   border-radius: 50%;
   background-color: transparent;
+  box-shadow: #003df5;
   width: 70px;
   height: 70px;
 }
