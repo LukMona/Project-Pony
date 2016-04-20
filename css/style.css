@@ -8,6 +8,7 @@
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
+  height: 95vh;
 }
 
 .grid-container .row:after, .grid-container .row:before {
@@ -85,6 +86,7 @@ header {
   padding-bottom: 200px;
 }
 
+/* clouds shape inspiration: http://thecodeplayer.com/walkthrough/make-a-simple-cloud-in-css3 */
 .container-1 {
   margin: 120px auto 20px;
 }
@@ -344,6 +346,9 @@ header {
   height: 250px;
   overflow: hidden;
   width: 300px;
+  position: absolute;
+  top: -50px;
+  left: 110px;
 }
 
 .pony-nav .pony-list {
@@ -357,6 +362,29 @@ header {
 
 .pony-nav .pony-list li {
   display: inline-block;
+}
+
+#prevPony, #nextPony {
+  border-radius: 50%;
+  background-color: transparent;
+  width: 70px;
+  height: 70px;
+}
+
+#prevPony img, #nextPony img {
+  width: 80%;
+}
+
+#prevPony {
+  position: relative;
+  top: 55px;
+  left: 15px;
+}
+
+#nextPony {
+  position: relative;
+  top: 55px;
+  left: 340px;
 }
 
 .cloud-right {

@@ -35,50 +35,113 @@ $(function(){
 
     setUlSize();
 
-      function setFirstPhoto(){
-        list.parent().css("left", -widthPhoto);
+    function setFirstPhoto(){
+      list.parent().css("left", -widthPhoto);
+    };
+
+    setFirstPhoto();
+
+    var index = 1;
+
+    // NEXT CLICK
+
+    next.on("click", function(){
+      index++;
+
+      ul.animate({
+        left: -(widthPhoto*index),
+        opacity: 0,
+      }, {
+        duration: 0,
+        complete: function moveToFirst(){
+          if (index === list.length-1){
+            index = 1;
+            list.parent().css("left", -widthPhoto);
+          };
+        }
+      });
+
+      ul.animate({
+        opacity: 1
+      }, 1500)
+
+      function ponyPuff(){
+
+        var pony = $(".ponys").eq(index);
+        var pony1 = $(".ponys").eq(index-1)
+
+        $(pony).auderoSmokeEffect({
+          imagePath: "img/cloud.png",
+          repeat: 1,
+          posX: 200,
+          posY: 220,
+        });
+
+        $(pony1).auderoSmokeEffect({
+          imagePath: "img/cloud.png",
+          repeat: 1,
+          posX: 340,
+          posY: 170,
+        })
+
       };
 
-      setFirstPhoto();
+      ponyPuff();
 
-      var index = 1;
 
-      next.on("click", function(){
-        console.log("Działa!");
-        index++;
 
-        ul.animate({
-          left: -(widthPhoto*index)
-        }, {
-          duration: 800,
-          complete: function moveToFirst(){
-            if (index === list.length-1){
-              index = 1;
-              list.parent().css("left", -widthPhoto);
-            };
-          }
-        });
+    });
+
+    // PREV CLICK
+
+    prev.on("click", function(){
+      index--;
+
+      ul.animate({
+        left: -(widthPhoto*index)
+      }, {
+        duration: 0,
+        complete: function moveToLast(){
+          if (index === 0){
+            index = list.length-2;
+            list.parent().css("left", -widthPhoto*(list.length-2));
+          };
+        }
       });
 
-      prev.on("click", function(){
-        console.log("Działa!");
-        index--;
+      function ponyPuff(){
 
-        ul.animate({
-          left: -(widthPhoto*index)
-        }, {
-          duration: 800,
-          complete: function moveToLast(){
-            if (index === 0){
-              index = list.length-2;
-              list.parent().css("left", -widthPhoto*(list.length-2));
-            };
-          }
+        var pony = $(".ponys").eq(index);
+        var pony1 = $(".ponys").eq(index-1)
+        console.log(pony);
+        console.log(pony1);
+
+        $(pony).auderoSmokeEffect({
+          imagePath: "img/cloud.png",
+          repeat: 1,
+          posX: 200,
+          posY: 220,
         });
-      });
+
+        $(pony1).auderoSmokeEffect({
+          imagePath: "img/cloud.png",
+          repeat: 1,
+          posX: 340,
+          posY: 170,
+        })
+
+      };
+
+      ponyPuff();
+
+    });
 
   };
 
   infinitePonySlider();
+
+
+
+
 
 });
