@@ -80,14 +80,8 @@ header {
   background-color: #87cefa;
 }
 
-.img {
-  width: 250px;
-  float: right;
-  z-index: 1000;
-}
-
 .col-3 {
-  padding-bottom: 1200px;
+  padding-bottom: 200px;
 }
 
 .container-1 {
@@ -381,6 +375,23 @@ header {
   }
 }
 
+.col-3 .img img {
+  animation-name: movingRainbow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes movingRainbow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px, 0);
+  }
+}
+
 .cloud-up-1 {
   margin: 27px 4px 20px;
 }
@@ -450,7 +461,7 @@ header {
 }
 
 .cloud-down-4 {
-  margin: 244px 200px 200px;
+  margin: 269px 200px 200px;
 }
 
 .cloud-down-4 .cloud-1 .base {
@@ -519,4 +530,32 @@ header {
 
 .cloud-down-7 {
   margin: -175px 40px 20px;
+}
+
+.cloud-up-5 {
+  margin: -200px 0 0 82px;
+}
+
+.cloud-down-8 {
+  margin: 505px 0 0 10px;
+}
+
+.cloud-down-9 {
+  margin: -361px 0 0 10px;
+}
+
+.cloud-down-10 {
+  margin: -196px 0 0 30px;
+}
+
+.cloud-up-6 {
+  margin: 100px 0 0 -17px;
+}
+
+.cloud-down-11 {
+  margin: 620px 0 0 150px;
+}
+
+.cloud-up-7 {
+  margin: 742px 0 0 -101px;
 }
