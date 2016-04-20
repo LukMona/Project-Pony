@@ -339,6 +339,19 @@ header {
   -webkit-border-radius: 50%;
 }
 
+.pony-nav .pony-list {
+  list-style: none;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.pony-nav .pony-list li {
+  display: inline-block;
+}
+
 .cloud-right {
   animation-name: cloudMovingRight;
   animation-duration: 3s;
