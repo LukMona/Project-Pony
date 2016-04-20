@@ -7,6 +7,7 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .grid-container .row:after, .grid-container .row:before {
@@ -337,6 +338,12 @@ header {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+}
+
+.pony-nav {
+  height: 250px;
+  overflow: hidden;
+  width: 300px;
 }
 
 .pony-nav .pony-list {
