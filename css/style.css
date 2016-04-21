@@ -8,7 +8,6 @@
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
-  height: 85vh;
 }
 
 .grid-container .row:after, .grid-container .row:before {
@@ -518,23 +517,6 @@ header {
   }
 }
 
-.col-3 .img img {
-  animation-name: movingRainbow;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-}
-
-@keyframes movingRainbow {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(5px, 0);
-  }
-}
-
 .cloud-up-1 {
   margin: 27px 4px 20px;
 }
@@ -705,28 +687,12 @@ header {
 
 .section1 .col-1 {
   background-color: #87cefa;
-  height: 300px;
+  height: 1000px;
 }
 
 .col-10 {
   background-color: #E1FEFA;
-  height: 300px;
-}
-
-.title-twilightsparkle {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.title-twilightsparkle .text-header {
-  font-family: "celestia_reduxmedium", Helvetica;
-  font-size: 30px;
-}
-
-.characteristic-twilightsparkle {
-  margin-top: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  height: auto;
 }
 
 .progress-radial {
@@ -754,6 +720,23 @@ header {
   font-size: 22px;
 }
 
+.title-twilightsparkle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title-twilightsparkle .text-header {
+  font-family: "celestia_reduxmedium", Helvetica;
+  font-size: 30px;
+}
+
+.characteristic-twilightsparkle {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 200px;
+}
+
 .twilight-book {
   width: 25%;
   float: left;
@@ -776,4 +759,49 @@ header {
   width: 25%;
   float: left;
   padding-right: 5px;
+}
+
+.twilight-quote .bg-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.twilight-quote .bg-img .img {
+  width: 100%;
+  background-image: url("../img/twilight_quote.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.twilight-quote .bg-img .img blockquote {
+  font-size: 50px;
+  font-family: "celestia_reduxmedium", Helvetica;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 150px;
+  padding-bottom: 150px;
+  text-indent: 20px;
+}
+
+.twilight-quote .bg-img .img blockquote::first-letter {
+  font-size: 76px;
+}
+
+.twilight-quote .bg-img .img span {
+  float: right;
+  font-size: 22px;
+  color: #858585;
+  font-family: "Raleway-Regular";
+}
+
+.twilight-quote .bg-img .img .openquote {
+  top: 0;
+  left: 0;
+}
+
+.twilight-quote .bg-img .img .closequote {
+  top: 0;
+  left: 0;
 }

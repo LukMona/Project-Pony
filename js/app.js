@@ -146,4 +146,18 @@ $(function(){
 
   infinitePonySlider();
 
+  function parallaxQuote(){
+
+    var quote = $(".quote");
+
+    $(window).scroll(function(){
+      var wScroll = $(this).scrollTop();
+      quote.css({
+        "transform" : "translate(0px, "+ wScroll/2 +"px)"
+      });
+    });
+  };
+
+  parallaxQuote();
+
 });
