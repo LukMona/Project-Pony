@@ -146,8 +146,4 @@ $(function(){
 
   infinitePonySlider();
 
-
-
-
-
 });

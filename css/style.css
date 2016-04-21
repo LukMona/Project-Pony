@@ -8,6 +8,7 @@
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
+  height: 100vh;
 }
 
 .grid-container .row:after, .grid-container .row:before {
@@ -75,6 +76,300 @@
   src: url("../fonts/celestiamediumredux1.55.eot?#iefix") format("embedded-opentype"), url("../fonts/celestiamediumredux1.55.woff2") format("woff2"), url("../fonts/celestiamediumredux1.55.woff") format("woff"), url("../fonts/celestiamediumredux1.55.ttf") format("truetype"), url("../fonts/celestiamediumredux1.55.svg#celestia_reduxmedium") format("svg");
   font-weight: normal;
   font-style: normal;
+}
+
+.progress-0 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(90deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-5 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(108deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-10 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(126deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-15 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(144deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-20 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(162deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-25 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(180deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-30 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(198deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-35 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(216deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-40 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(234deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-45 {
+  width: 10;
+  background-image: linear-gradient(90deg, #A6DEFC 50%, transparent 50%, transparent), linear-gradient(252deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-50 {
+  width: 10;
+  background-image: linear-gradient(-90deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-55 {
+  width: 10;
+  background-image: linear-gradient(-72deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-60 {
+  width: 10;
+  background-image: linear-gradient(-54deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-65 {
+  width: 10;
+  background-image: linear-gradient(-36deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-70 {
+  width: 10;
+  background-image: linear-gradient(-18deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-75 {
+  width: 10;
+  background-image: linear-gradient(0deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-80 {
+  width: 10;
+  background-image: linear-gradient(18deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-85 {
+  width: 10;
+  background-image: linear-gradient(36deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-90 {
+  width: 10;
+  background-image: linear-gradient(54deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-95 {
+  width: 10;
+  background-image: linear-gradient(72deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
+}
+
+.progress-100 {
+  width: 10;
+  background-image: linear-gradient(90deg, #6BC8FA 50%, transparent 50%, transparent), linear-gradient(270deg, #6BC8FA 50%, #A6DEFC 50%, #A6DEFC);
+}
+
+@keyframes progressMove {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: 0;
+  }
 }
 
 header {
@@ -366,7 +661,6 @@ header {
 #prevPony, #nextPony {
   border-radius: 50%;
   background-color: transparent;
-  box-shadow: #003df5;
   width: 70px;
   height: 70px;
 }
@@ -614,11 +908,54 @@ header {
 }
 
 .col-10 {
-  background-color: #E2F4FE;
+  background-color: #E1FEFA;
   height: 300px;
 }
 
-.textarea-twilightsparkle .text-header {
+.title-twilightsparkle {
+  text-align: center;
+}
+
+.title-twilightsparkle .text-header {
   font-family: "celestia_reduxmedium";
   font-size: 30px;
+}
+
+.characteristic-twilightsparkle {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.twilight-book .progress-radial {
+  float: left;
+  margin-right: 30px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #A6DEFC;
+  background-color: #6BC8FA;
+}
+
+.twilight-book .overlay {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: #E1FEEB;
+  border-radius: 50%;
+  margin-left: 8px;
+  margin-top: 8px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+.progress-radial {
+  animation-name: progressMove;
+  animation-duration: 3s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
