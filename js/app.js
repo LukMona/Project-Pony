@@ -146,18 +146,63 @@ $(function(){
 
   infinitePonySlider();
 
-  function parallaxQuote(){
+  function clickOnPony(){
+    $(".pony-list").find("a").on("click", function(){
+      var hrefInside = $(this).attr("href");
+      var checkHrefPosition = $(hrefInside).offset().top;
 
-    var quote = $(".quote");
-
-    $(window).scroll(function(){
-      var wScroll = $(this).scrollTop();
-      quote.css({
-        "transform" : "translate(0px, "+ wScroll/2 +"px)"
-      });
-    });
+      $("html, body").animate({
+        scrollTop: checkHrefPosition
+      }, 2000);
+      return false;
+    })
   };
 
-  parallaxQuote();
+  clickOnPony();
+
+  function animateCircles(){
+
+    function setCircleState(id, color, state) {
+      if (state == 0){
+        state = 100;
+      }else if (state == 100){
+        state = 0;
+      }
+
+      var angle = state / 50 * Math.PI - 1 / 2 * Math.PI;
+      var c = document.getElementById(id).getContext("2d");
+
+      c.clearRect(0, 0, 50, 50);
+
+      c.lineWidth = 3;
+      c.strokeStyle = color;
+      c.lineCap = 'round';
+
+      c.beginPath();
+      c.moveTo(25, 2);
+
+      c.arc(25, 25, 23, 3 / 2 * Math.PI, angle, false);
+      c.stroke();
+    };
+
+    function animateCircleState(id, color, begin, end) {
+      setCircleState(id, color, begin);
+      if( begin < end ) {
+        setTimeout(function(){
+          animateCircleState(id, color, begin + 1, end);
+        }, 3);
+      };
+    };
+
+
+    window.onload = load;
+
+    function load(){
+      animateCircleState("canvas1", '#4daf70', 0, 85);
+    };
+  };
+
+  animateCircles();
+
 
 });
