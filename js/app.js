@@ -165,12 +165,12 @@ $(function(){
     var circle = document.getElementsByClassName("circle");
     console.log(circle);
 
-    for (var i = 0; i < circle.length; i++){
+    // for (var i = 0; i < circle.length; i++){
 
-      var circle = circle[i];
-      console.log(circle);
+      // var circle = circle[i];
+      // console.log(circle);
 
-      function setCircleState(id, color, state) {
+      function setCircleState(i, id, color, state) {
         if (state == 0){
           state = 100;
         }else if (state == 100){
@@ -178,7 +178,7 @@ $(function(){
         }
 
         var angle = state / 50 * Math.PI - 1 / 2 * Math.PI;
-        var c = circle.getContext("2d");
+        var c = circle[i].getContext("2d");
 
         c.clearRect(0, 0, 500, 500);
 
@@ -192,12 +192,22 @@ $(function(){
         c.stroke();
       };
 
-      function animateCircleState(id, color, begin, end) {
-        setCircleState(id, color, begin);
+      function animateCircleState(i,id, color, begin, end) {
+        setCircleState(i,id, color, begin);
         if( begin < end ) {
-          setTimeout(function(){
-            animateCircleState(id, color, begin + 1, end);
-          }, 15);
+
+          // setTimeout(function(){
+          //   animateCircleState(id, color, begin + 1, end);
+          // }, 15);
+
+          for (var i = 0; i < 4; i++) {
+              (function(index) {
+                  setTimeout(function() {
+                    animateCircleState(i,id, color, begin + 1, end);
+                  }, i * 1000);
+              })(i);
+          }
+
         };
       };
 
@@ -205,7 +215,7 @@ $(function(){
         animateCircleState(circle, '#6BC8FA', 0, 87);
       });
 
-    };
+    // };
 
   };
 
@@ -229,6 +239,6 @@ $(function(){
     });
   };
 
-  // intro();
+  intro();
 
 });
