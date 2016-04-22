@@ -170,7 +170,7 @@ $(function(){
       }
 
       var angle = state / 50 * Math.PI - 1 / 2 * Math.PI;
-      var c = document.getElementById(id).getContext("2d");
+      var c = document.getElementsByClassName(id).getContext("2d");
 
       c.clearRect(0, 0, 500, 500);
 
@@ -193,12 +193,15 @@ $(function(){
       };
     };
 
+    var circle = $(".circle");
+    console.log(circle);
 
-    window.onload = load;
-
-    function load(){
-      animateCircleState("canvas1", '#6BC8FA', 0, 87);
-    };
+    $(window).on("scroll", function(){
+      for (var i = 0; i < circle.length; i++){
+        var actuallCircle = $(circle).eq[i];
+        animateCircleState(actuallCircle, '#6BC8FA', 0, 87);
+      }
+    });
 
   };
 
