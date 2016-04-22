@@ -162,8 +162,6 @@ $(function(){
 
   function animateCircles(){
 
-    var id =
-
     function setCircleState(id, color, state) {
       if (state == 0){
         state = 100;
@@ -181,7 +179,6 @@ $(function(){
       c.lineCap = 'round';
 
       c.beginPath();
-      // c.moveTo(25, 2);
 
       c.arc(50, 50, 46, 3 / 2 * Math.PI, angle, false);
       c.stroke();
@@ -202,6 +199,7 @@ $(function(){
     function load(){
       animateCircleState("canvas1", '#6BC8FA', 0, 87);
     };
+
   };
 
   animateCircles();
