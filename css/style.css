@@ -603,15 +603,51 @@ header {
 
 .section1 .col-1 {
   background-color: #87cefa;
+  overflow: hidden;
 }
 
 .col-10 {
   background-color: #E1FEFA;
-  height: auto;
 }
 
 .cloud-up-8 {
-  margin: 0 0 0 -22px;
+  margin: -40px 0 0 -22px;
+}
+
+.cloud-up-9 {
+  margin: 150px 0 0 -30px;
+}
+
+.cloud-up-10 {
+  margin: 300px 0 0 -19px;
+}
+
+.cloud-up-11 {
+  margin: 420px 0 0 -27px;
+}
+
+.cloud-up-12 {
+  margin: 500px 0 0 -20px;
+}
+
+.cloud-up-13 {
+  margin: -38px 0 0 -22px;
+}
+
+.cloud-up-14 {
+  margin: 135px 0 0 -30px;
+}
+
+.cloud-up-15 {
+  margin: 275px 0 0 -19px;
+}
+
+.cloud-up-16 {
+  margin: 378px 0 0 -27px;
+}
+
+.cloud-up-17 {
+  margin: 503px 0 0 -20px;
 }
 
 .progress-radial {
@@ -681,7 +717,7 @@ header {
 
 .twilight-quote .bg-img .img blockquote {
   font-size: 50px;
-  font-family: "celestia_reduxmedium", Helvetica;
+  font-family: "Raleway-Regular";
   padding-top: 100px;
   padding-left: 200px;
   padding-right: 150px;
@@ -698,14 +734,4 @@ header {
   font-size: 22px;
   color: #858585;
   font-family: "Raleway-Regular";
-}
-
-.twilight-quote .bg-img .img .openquote {
-  top: 0;
-  left: 0;
-}
-
-.twilight-quote .bg-img .img .closequote {
-  top: 0;
-  left: 0;
 }

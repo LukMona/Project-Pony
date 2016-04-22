@@ -162,9 +162,13 @@ $(function(){
 
   function animateCircles(){
 
-    var circle = $(".circle");
+    var circle = document.getElementsByClassName("circle");
+    console.log(circle);
 
     for (var i = 0; i < circle.length; i++){
+
+      var circle = circle[i];
+      console.log(circle);
 
       function setCircleState(id, color, state) {
         if (state == 0){
@@ -174,8 +178,7 @@ $(function(){
         }
 
         var angle = state / 50 * Math.PI - 1 / 2 * Math.PI;
-        var c = $(circle)[0].getContext("2d");
-        console.log(c);
+        var c = circle.getContext("2d");
 
         c.clearRect(0, 0, 500, 500);
 
@@ -206,7 +209,7 @@ $(function(){
 
   };
 
-  // animateCircles();
+  animateCircles();
 
   function intro(){
 
@@ -226,6 +229,6 @@ $(function(){
     });
   };
 
-  intro();
+  // intro();
 
 });
