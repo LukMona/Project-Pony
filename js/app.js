@@ -162,50 +162,51 @@ $(function(){
 
   function animateCircles(){
 
-    function setCircleState(id, color, state) {
-      if (state == 0){
-        state = 100;
-      }else if (state == 100){
-        state = 0;
-      }
+        var circle = $(".circle");
 
-      var angle = state / 50 * Math.PI - 1 / 2 * Math.PI;
-      var c = document.getElementsByClassName(id).getContext("2d");
+    for (var i = 0; i < circle.length; i++){
 
-      c.clearRect(0, 0, 500, 500);
+      function setCircleState(id, color, state) {
+        if (state == 0){
+          state = 100;
+        }else if (state == 100){
+          state = 0;
+        }
 
-      c.lineWidth = 8;
-      c.strokeStyle = color;
-      c.lineCap = 'round';
+        var angle = state / 50 * Math.PI - 1 / 2 * Math.PI;
+        var c = $(circle)[0].getContext("2d");
+        console.log(c);
 
-      c.beginPath();
+        c.clearRect(0, 0, 500, 500);
 
-      c.arc(50, 50, 46, 3 / 2 * Math.PI, angle, false);
-      c.stroke();
-    };
+        c.lineWidth = 8;
+        c.strokeStyle = color;
+        c.lineCap = 'round';
 
-    function animateCircleState(id, color, begin, end) {
-      setCircleState(id, color, begin);
-      if( begin < end ) {
-        setTimeout(function(){
-          animateCircleState(id, color, begin + 1, end);
-        }, 15);
+        c.beginPath();
+
+        c.arc(50, 50, 46, 3 / 2 * Math.PI, angle, false);
+        c.stroke();
       };
+
+      function animateCircleState(id, color, begin, end) {
+        setCircleState(id, color, begin);
+        if( begin < end ) {
+          setTimeout(function(){
+            animateCircleState(id, color, begin + 1, end);
+          }, 15);
+        };
+      };
+
+      $(window).on("scroll", function(){
+          animateCircleState(circle, '#6BC8FA', 0, 87);
+        });
+
     };
-
-    var circle = $(".circle");
-    console.log(circle);
-
-    $(window).on("scroll", function(){
-      for (var i = 0; i < circle.length; i++){
-        var actuallCircle = $(circle).eq[i];
-        animateCircleState(actuallCircle, '#6BC8FA', 0, 87);
-      }
-    });
 
   };
 
-  animateCircles();
+  // animateCircles();
 
 
 });
