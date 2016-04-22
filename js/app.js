@@ -162,6 +162,8 @@ $(function(){
 
   function animateCircles(){
 
+    var id =
+
     function setCircleState(id, color, state) {
       if (state == 0){
         state = 100;
@@ -172,16 +174,16 @@ $(function(){
       var angle = state / 50 * Math.PI - 1 / 2 * Math.PI;
       var c = document.getElementById(id).getContext("2d");
 
-      c.clearRect(0, 0, 50, 50);
+      c.clearRect(0, 0, 500, 500);
 
-      c.lineWidth = 3;
+      c.lineWidth = 8;
       c.strokeStyle = color;
       c.lineCap = 'round';
 
       c.beginPath();
-      c.moveTo(25, 2);
+      // c.moveTo(25, 2);
 
-      c.arc(25, 25, 23, 3 / 2 * Math.PI, angle, false);
+      c.arc(50, 50, 46, 3 / 2 * Math.PI, angle, false);
       c.stroke();
     };
 
@@ -190,7 +192,7 @@ $(function(){
       if( begin < end ) {
         setTimeout(function(){
           animateCircleState(id, color, begin + 1, end);
-        }, 3);
+        }, 15);
       };
     };
 
@@ -198,7 +200,7 @@ $(function(){
     window.onload = load;
 
     function load(){
-      animateCircleState("canvas1", '#4daf70', 0, 85);
+      animateCircleState("canvas1", '#6BC8FA', 0, 87);
     };
   };
 
