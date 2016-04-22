@@ -162,7 +162,7 @@ $(function(){
 
   function animateCircles(){
 
-        var circle = $(".circle");
+    var circle = $(".circle");
 
     for (var i = 0; i < circle.length; i++){
 
@@ -199,8 +199,8 @@ $(function(){
       };
 
       $(window).on("scroll", function(){
-          animateCircleState(circle, '#6BC8FA', 0, 87);
-        });
+        animateCircleState(circle, '#6BC8FA', 0, 87);
+      });
 
     };
 
@@ -208,5 +208,24 @@ $(function(){
 
   // animateCircles();
 
+  function intro(){
+
+    $('body').chardinJs('start');
+
+    $(window).on("scroll", function(){
+      e.preventDefault();
+      if($("#ponyNav").is(":visible")) {
+        return ($("body").data("chardinJs")).toggle();
+      }else{
+        return $("#ponyNav").animate({
+          height: 250
+        }, 600, function() {
+          return ($("body").data("chardinJs")).toggle();
+        });
+      }
+    });
+  };
+
+  intro();
 
 });
