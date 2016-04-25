@@ -160,67 +160,6 @@ $(function(){
 
   clickOnPony();
 
-  function animateCircles(){
-
-    var circle = document.getElementsByClassName("circle");
-    console.log(circle);
-
-    // for (var i = 0; i < circle.length; i++){
-
-      // var circle = circle[i];
-      // console.log(circle);
-
-      function setCircleState(i, id, color, state) {
-        if (state == 0){
-          state = 100;
-        }else if (state == 100){
-          state = 0;
-        }
-
-        var angle = state / 50 * Math.PI - 1 / 2 * Math.PI;
-        var c = circle[i].getContext("2d");
-
-        c.clearRect(0, 0, 500, 500);
-
-        c.lineWidth = 8;
-        c.strokeStyle = color;
-        c.lineCap = 'round';
-
-        c.beginPath();
-
-        c.arc(50, 50, 46, 3 / 2 * Math.PI, angle, false);
-        c.stroke();
-      };
-
-      function animateCircleState(i,id, color, begin, end) {
-        setCircleState(i,id, color, begin);
-        if( begin < end ) {
-
-          // setTimeout(function(){
-          //   animateCircleState(id, color, begin + 1, end);
-          // }, 15);
-
-          for (var i = 0; i < 4; i++) {
-              (function(index) {
-                  setTimeout(function() {
-                    animateCircleState(i,id, color, begin + 1, end);
-                  }, i * 1000);
-              })(i);
-          }
-
-        };
-      };
-
-      $(window).on("scroll", function(){
-        animateCircleState(circle, '#6BC8FA', 0, 87);
-      });
-
-    // };
-
-  };
-
-  animateCircles();
-
   function intro(){
 
     $('body').chardinJs('start');
@@ -238,7 +177,43 @@ $(function(){
       }
     });
   };
+  //
+  // intro();
 
-  intro();
 
+  function progressCircles(){
+    $('#circle-book').circleProgress({
+        value: 0.87,
+        size: 100,
+        fill: {
+            color: "#6BC8FA"
+        }
+    });
+
+    $("#circle-leadership").circleProgress({
+      value: 1,
+      size: 100,
+      fill: {
+          color: "#6BC8FA"
+      }
+    });
+
+    $("#circle-teleportation").circleProgress({
+      value: 0.25,
+      size: 100,
+      fill: {
+          color: "#6BC8FA"
+      }
+    });
+
+    $("#circle-fire").circleProgress({
+      value: 0.5,
+      size: 100,
+      fill: {
+          color: "#6BC8FA"
+      }
+    });
+  };
+
+  progressCircles();
 });
