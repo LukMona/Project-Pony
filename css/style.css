@@ -656,8 +656,18 @@ header {
 
 .progress-radial .circle-img {
   position: absolute;
-  top: 25px;
-  left: 28px;
+  top: 20%;
+  left: 41%;
+}
+
+.twilight-teleportation .progress-radial {
+  position: relative;
+}
+
+.twilight-teleportation .progress-radial .circle-img {
+  position: absolute;
+  top: 19%;
+  left: 38%;
 }
 
 .title-twilightsparkle {
@@ -681,24 +691,28 @@ header {
   width: 25%;
   float: left;
   padding-right: 5px;
+  text-align: center;
 }
 
 .twilight-leadership {
   width: 25%;
   float: left;
   padding-right: 5px;
+  text-align: center;
 }
 
 .twilight-teleportation {
   width: 25%;
   float: left;
   padding-right: 5px;
+  text-align: center;
 }
 
 .twilight-fire {
   width: 25%;
   float: left;
   padding-right: 5px;
+  text-align: center;
 }
 
 .twilight-quote .bg-img {
