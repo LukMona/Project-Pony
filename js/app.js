@@ -182,19 +182,34 @@ $(function(){
 
 
   function progressCircles(){
+
+    var el = $('.circle'),
+    inited = false;
+
+    el.appear({
+      force_process: true
+    });
+
+    el.on('appear', function() {
+      if (!inited) {
+        el.circleProgress({ value: 0.7 });
+        inited = true;
+      }
+    });
+
     $('#circle-book').circleProgress({
-        value: 0.87,
-        size: 100,
-        fill: {
-            color: "#6BC8FA"
-        }
+      value: 0.87,
+      size: 100,
+      fill: {
+        color: "#6BC8FA"
+      }
     });
 
     $("#circle-leadership").circleProgress({
       value: 1,
       size: 100,
       fill: {
-          color: "#6BC8FA"
+        color: "#6BC8FA"
       }
     });
 
@@ -202,7 +217,7 @@ $(function(){
       value: 0.25,
       size: 100,
       fill: {
-          color: "#6BC8FA"
+        color: "#6BC8FA"
       }
     });
 
@@ -210,10 +225,11 @@ $(function(){
       value: 0.5,
       size: 100,
       fill: {
-          color: "#6BC8FA"
+        color: "#6BC8FA"
       }
     });
   };
 
   progressCircles();
+
 });
