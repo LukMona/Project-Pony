@@ -183,21 +183,7 @@ $(function(){
 
   function progressCircles(){
 
-    var el = $('.circle'),
-    inited = false;
-
-    el.appear({
-      force_process: true
-    });
-
-    el.on('appear', function() {
-      if (!inited) {
-        el.circleProgress({ value: 0.7 });
-        inited = true;
-      }
-    });
-
-    $('#circle-book').circleProgress({
+    $("#circle-book").circleProgress({
       value: 0.87,
       size: 100,
       fill: {
@@ -228,6 +214,7 @@ $(function(){
         color: "#6BC8FA"
       }
     });
+
   };
 
   progressCircles();
