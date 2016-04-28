@@ -777,12 +777,37 @@ header {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
+.twilight-function .talking-div .answer-talk {
+  background-color: #1b3669;
+  display: inline-block;
+  line-height: 1.45em;
+  margin: 0 1.5em 1em 22em;
+  border-radius: 3px;
+  color: #CCE6FF;
+  text-align: left;
+  position: relative;
+  padding: 6px 12px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  font-size: 19px;
+  border: none;
+  max-width: 90%;
+  min-width: 44px;
+  min-height: 12px;
+  float: right;
+}
+
+.twilight-function .talking-div .clear {
+  clear: both;
+}
+
 .talking-button {
   text-align: center;
   padding: 2%;
 }
 
-.talking-button div {
+.answer {
   cursor: pointer;
   background-color: #1b3669;
   margin: 12px 6px;

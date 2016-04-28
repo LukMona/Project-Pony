@@ -219,4 +219,190 @@ $(function(){
 
   progressCircles();
 
+  function talkingPony(){
+
+    var bookBtn = document.querySelector(".books");
+    var celestiaBtn = document.querySelector(".celestia");
+    var talkList = document.querySelector(".talk");
+    var answerBtns = document.querySelector(".talking-button");
+
+    bookBtn.addEventListener("click", function(event){
+
+      bookBtn.parentNode.removeChild(bookBtn);
+      celestiaBtn.parentNode.removeChild(celestiaBtn);
+
+      var li = document.createElement("li");
+      li.innerHTML = "Szukam książki.";
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liBook = document.createElement("li");
+      var br = document.createElement("br");
+      liBook.innerHTML = "Nasza biblioteka w Ponyville jest świetnie zaopatrzona."
+      talkList.appendChild(liBook);
+      talkList.appendChild(br);
+      var liBook2 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook2.innerHTML = "Ale większość książek jest już wypożyczona."
+      talkList.appendChild(liBook2);
+      talkList.appendChild(br);
+      var liBook3 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook3.innerHTML = "Zostały tylko te tytuły.";
+      talkList.appendChild(liBook3);
+      talkList.appendChild(br);
+      var liBook4 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook4.innerHTML = "Może któryś z nich?";
+      talkList.appendChild(liBook4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+      divAnswer1.innerHTML = '"Dzielna Do i Poszukiwania Wielkiego Szafiru"';
+      divAnswer2.innerHTML = '"Dzielna Do i Puchar Gryfów"';
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("poszukiwania");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("puchar");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+      return false;
+    });
+
+
+    $(".talking-button").on("click", ".poszukiwania", function(){
+
+      var poszukiwaniaBtn = document.querySelector(".poszukiwania");
+      var pucharBtn = document.querySelector(".puchar");
+
+      poszukiwaniaBtn.parentNode.removeChild(poszukiwaniaBtn);
+      pucharBtn.parentNode.removeChild(pucharBtn);
+
+      var li = document.createElement("li");
+      li.innerHTML = 'Poproszę "Dzielną Do i Poszukiwania Wielkiego Szafiru".';
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liBook = document.createElement("li");
+      var br = document.createElement("br");
+      liBook.innerHTML = "Świetnie!"
+      talkList.appendChild(liBook);
+      talkList.appendChild(br);
+
+      var liBook2 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook2.innerHTML = "To jedna z moich ulubionych."
+      talkList.appendChild(liBook2);
+      talkList.appendChild(br);
+
+      var liBook3 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook3.innerHTML = "Mam nadzieję, że będzie Ci się podobać."
+      talkList.appendChild(liBook3);
+      talkList.appendChild(br);
+
+      var liBook4 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook4.innerHTML = "Czy mogę Ci pomóc w czymś jeszcze?"
+      talkList.appendChild(liBook4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+
+      divAnswer1.innerHTML = "To wszystko, dziękuję.";
+      divAnswer2.innerHTML = "Mam parę pytań o księżniczkę Celestię.";
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("thats-all");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("celestia");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+      return false;
+    })
+
+    $(".talking-button").on("click", ".puchar", function(){
+
+      var poszukiwaniaBtn = document.querySelector(".poszukiwania");
+      var pucharBtn = document.querySelector(".puchar");
+
+      poszukiwaniaBtn.parentNode.removeChild(poszukiwaniaBtn);
+      pucharBtn.parentNode.removeChild(pucharBtn);
+
+      var li = document.createElement("li");
+      li.innerHTML = 'Wezmę "Dzielną Do i Puchar Gryfów".';
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liBook = document.createElement("li");
+      var br = document.createElement("br");
+      liBook.innerHTML = "Doskonały wybór!"
+      talkList.appendChild(liBook);
+      talkList.appendChild(br);
+
+      var liBook2 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook2.innerHTML = "Ta książka aż pachnie przygodami."
+      talkList.appendChild(liBook2);
+      talkList.appendChild(br);
+
+      var liBook3 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook3.innerHTML = "Tylko nie próbuj tego w domu!"
+      talkList.appendChild(liBook3);
+      talkList.appendChild(br);
+
+      var liBook4 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook4.innerHTML = "Czy masz jeszcze jakieś pytanie?"
+      talkList.appendChild(liBook4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+
+      divAnswer1.innerHTML = "Już wszystko wiem.";
+      divAnswer2.innerHTML = "Interesuje mnie księżniczka Celestia.";
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("thats-all");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("celestia");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+      return false;
+    });
+
+
+
+
+
+  };
+
+  talkingPony();
+
 });
