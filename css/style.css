@@ -85,7 +85,7 @@
 }
 
 body {
-  font-family: "Raleway-Regular";
+  font-family: "Raleway-Regular", Arial;
 }
 
 header {
@@ -731,7 +731,7 @@ header {
 
 .twilight-quote .bg-img .img blockquote {
   font-size: 50px;
-  font-family: "Raleway-Regular";
+  font-family: "Raleway-Regular", Arial;
   padding-top: 100px;
   padding-left: 200px;
   padding-right: 150px;
@@ -747,5 +747,58 @@ header {
   float: right;
   font-size: 22px;
   color: #858585;
-  font-family: "Raleway-Regular";
+  font-family: "Raleway-Regular", Arial;
+}
+
+.twilight-function .talk-with-me-header {
+  text-align: center;
+  padding-top: 2%;
+}
+
+.twilight-function .talk-with-me-header span {
+  font-family: "celestia_reduxmedium", Helvetica;
+  font-size: 30px;
+}
+
+.twilight-function .talking-div li {
+  display: inline-block;
+  line-height: 1.45em;
+  border-radius: 3px;
+  margin: 0 0 1.5em 2em;
+  text-align: left;
+  padding: 6px 12px;
+  background: #eb4492;
+  font-size: 19px;
+  max-width: 90%;
+  min-width: 44px;
+  min-height: 12px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.talking-button {
+  text-align: center;
+  padding: 2%;
+}
+
+.talking-button div {
+  cursor: pointer;
+  background-color: #1b3669;
+  margin: 12px 6px;
+  display: inline-block;
+  line-height: 1.45em;
+  border-radius: 3px;
+  color: #CCE6FF;
+  text-align: left;
+  position: relative;
+  padding: 6px 12px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  font-size: 19px;
+  border: none;
+  max-width: 90%;
+  min-width: 44px;
+  min-height: 12px;
 }
