@@ -587,6 +587,124 @@ $(function(){
       return false;
     })
 
+    // ALMOST FINISH TALK, BACK TO BOOK BUTTON
+
+    $(".talking-button").on("click", ".books", function(){
+
+      var booksBtn = document.querySelector(".books");
+      var thatsAllBtn = document.querySelector(".thats-all");
+
+      booksBtn.parentNode.removeChild(booksBtn);
+      thatsAllBtn.parentNode.removeChild(thatsAllBtn);
+
+      var li = document.createElement("li");
+      li.innerHTML = "Szukam książki.";
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liBook = document.createElement("li");
+      var br = document.createElement("br");
+      liBook.innerHTML = "Nasza biblioteka w Ponyville jest świetnie zaopatrzona."
+      talkList.appendChild(liBook);
+      talkList.appendChild(br);
+      var liBook2 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook2.innerHTML = "Ale większość książek jest już wypożyczona."
+      talkList.appendChild(liBook2);
+      talkList.appendChild(br);
+      var liBook3 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook3.innerHTML = "Zostały tylko te tytuły.";
+      talkList.appendChild(liBook3);
+      talkList.appendChild(br);
+      var liBook4 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook4.innerHTML = "Może któryś z nich?";
+      talkList.appendChild(liBook4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+      divAnswer1.innerHTML = '"Dzielna Do i Poszukiwania Wielkiego Szafiru"';
+      divAnswer2.innerHTML = '"Dzielna Do i Puchar Gryfów"';
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("poszukiwania");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("puchar");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+      return false;
+    });
+
+    // ALMOST FINISH TALK, BACK TO CELESTIA BUTTON
+
+    $(".talking-button").on("click", ".celestia", function(){
+
+      var celestiaBtn = document.querySelector(".celestia");
+      var thatsAllBtn = document.querySelector(".thats-all");
+
+      celestiaBtn.parentNode.removeChild(celestiaBtn);
+      thatsAllBtn.parentNode.removeChild(thatsAllBtn);
+
+
+      var li = document.createElement("li");
+      li.innerHTML = "Chcę wiedzieć więcej o Księżniczce Celestii.";
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liCelestia = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia.innerHTML = "Jesteś u odpowiedniej osoby."
+      talkList.appendChild(liCelestia);
+      talkList.appendChild(br);
+
+      var liCelestia2 = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia2.innerHTML = "Władczyni Equestrii to moja mentorka."
+      talkList.appendChild(liCelestia2);
+      talkList.appendChild(br);
+
+      var liCelestia3 = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia3.innerHTML = "Jej postać jest taka inspirująca i tyle mogę się od niej nauczyć!"
+      talkList.appendChild(liCelestia3);
+      talkList.appendChild(br);
+
+      var liCelestia4 = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia4.innerHTML = "A Ciebie dlaczego interesuje?"
+      talkList.appendChild(liCelestia4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+      divAnswer1.innerHTML = "Interesuje mnie jej siostra.";
+      divAnswer2.innerHTML = "Opowiedz mi o jej magicznej mocy.";
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("siostra");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("magiczna-moc");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+      return false;
+    })
 
 
 
