@@ -226,6 +226,8 @@ $(function(){
     var talkList = document.querySelector(".talk");
     var answerBtns = document.querySelector(".talking-button");
 
+    // BOOK 1 ANSWER
+
     bookBtn.addEventListener("click", function(event){
 
       bookBtn.parentNode.removeChild(bookBtn);
@@ -278,7 +280,64 @@ $(function(){
       return false;
     });
 
+    // CELESTIA 1 ANSWER
 
+    celestiaBtn.addEventListener("click", function(event){
+      bookBtn.parentNode.removeChild(bookBtn);
+      celestiaBtn.parentNode.removeChild(celestiaBtn);
+
+      var li = document.createElement("li");
+      li.innerHTML = "Chcę wiedzieć więcej o Księżniczce Celestii.";
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liCelestia = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia.innerHTML = "Jesteś u odpowiedniej osoby."
+      talkList.appendChild(liCelestia);
+      talkList.appendChild(br);
+
+      var liCelestia2 = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia2.innerHTML = "Władczyni Equestrii to moja mentorka."
+      talkList.appendChild(liCelestia2);
+      talkList.appendChild(br);
+
+      var liCelestia3 = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia3.innerHTML = "Jej postać jest taka inspirująca i tyle mogę się od niej nauczyć!"
+      talkList.appendChild(liCelestia3);
+      talkList.appendChild(br);
+
+      var liCelestia4 = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia4.innerHTML = "A Ciebie dlaczego interesuje?"
+      talkList.appendChild(liCelestia4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+      divAnswer1.innerHTML = "Interesuje mnie jej siostra.";
+      divAnswer2.innerHTML = "Chcę wiedzieć o jej magicznej mocy.";
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("siostra");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("magiczna-moc");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+      return false;
+    })
+
+    // BOOK ANSWER 2
     $(".talking-button").on("click", ".poszukiwania", function(){
 
       var poszukiwaniaBtn = document.querySelector(".poszukiwania");
@@ -286,6 +345,67 @@ $(function(){
 
       poszukiwaniaBtn.parentNode.removeChild(poszukiwaniaBtn);
       pucharBtn.parentNode.removeChild(pucharBtn);
+
+      var li = document.createElement("li");
+      li.innerHTML = 'Poproszę "Dzielną Do i Poszukiwania Wielkiego Szafiru".';
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liBook = document.createElement("li");
+      var br = document.createElement("br");
+      liBook.innerHTML = "Świetnie!"
+      talkList.appendChild(liBook);
+      talkList.appendChild(br);
+
+      var liBook2 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook2.innerHTML = "To jedna z moich ulubionych."
+      talkList.appendChild(liBook2);
+      talkList.appendChild(br);
+
+      var liBook3 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook3.innerHTML = "Mam nadzieję, że będzie Ci się podobać."
+      talkList.appendChild(liBook3);
+      talkList.appendChild(br);
+
+      var liBook4 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook4.innerHTML = "Czy mogę Ci pomóc w czymś jeszcze?"
+      talkList.appendChild(liBook4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+
+      divAnswer1.innerHTML = "To wszystko, dziękuję.";
+      divAnswer2.innerHTML = "Mam parę pytań o księżniczkę Celestię.";
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("thats-all");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("celestia");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+      return false;
+    })
+
+    // CELESTIA ANSWER 2
+
+    $(".talking-button").on("click", ".poszukiwania", function(){
+
+      var siostraBtn = document.querySelector(".siostra");
+      var magicznaMocBtn = document.querySelector(".magiczna-moc");
+
+      siostraBtn.parentNode.removeChild(siostraBtn);
+      magicznaMocBtn.parentNode.removeChild(magicznaMocBtn);
 
       var li = document.createElement("li");
       li.innerHTML = 'Poproszę "Dzielną Do i Poszukiwania Wielkiego Szafiru".';
