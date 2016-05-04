@@ -219,6 +219,8 @@ $(function(){
 
   progressCircles();
 
+
+
   function talkingPony(){
 
     var bookBtn = document.querySelector(".books");
@@ -320,7 +322,7 @@ $(function(){
       var divAnswer1 = document.createElement("div");
       var divAnswer2 = document.createElement("div");
       divAnswer1.innerHTML = "Interesuje mnie jej siostra.";
-      divAnswer2.innerHTML = "Chcę wiedzieć o jej magicznej mocy.";
+      divAnswer2.innerHTML = "Opowiedz mi o jej magicznej mocy.";
       divAnswer1.classList.add("answer");
       divAnswer1.classList.add("siostra");
       divAnswer2.classList.add("answer");
@@ -399,7 +401,7 @@ $(function(){
 
     // CELESTIA ANSWER 2
 
-    $(".talking-button").on("click", ".poszukiwania", function(){
+    $(".talking-button").on("click", ".siostra", function(){
 
       var siostraBtn = document.querySelector(".siostra");
       var magicznaMocBtn = document.querySelector(".magiczna-moc");
@@ -408,45 +410,51 @@ $(function(){
       magicznaMocBtn.parentNode.removeChild(magicznaMocBtn);
 
       var li = document.createElement("li");
-      li.innerHTML = 'Poproszę "Dzielną Do i Poszukiwania Wielkiego Szafiru".';
+      li.innerHTML = "Dlaczego Księżniczka Luana zamieniła się w Nightmare Moon?";
       var br = document.createElement("br");
       li.classList.add("answer-talk");
       talkList.appendChild(li);
       talkList.appendChild(br);
 
-      var liBook = document.createElement("li");
+      var liNightmare = document.createElement("li");
       var br = document.createElement("br");
-      liBook.innerHTML = "Świetnie!"
-      talkList.appendChild(liBook);
+      liNightmare.innerHTML = "Luana uważała, że życie Celestii jest ciekawsze."
+      talkList.appendChild(liNightmare);
       talkList.appendChild(br);
 
-      var liBook2 = document.createElement("li");
+      var liNightmare2 = document.createElement("li");
       var br = document.createElement("br");
-      liBook2.innerHTML = "To jedna z moich ulubionych."
-      talkList.appendChild(liBook2);
+      liNightmare2.innerHTML = "Widziała, że wszystkie kucyki są aktywne w ciągu dnia,"
+      talkList.appendChild(liNightmare2);
       talkList.appendChild(br);
 
-      var liBook3 = document.createElement("li");
+      var liNightmare3 = document.createElement("li");
       var br = document.createElement("br");
-      liBook3.innerHTML = "Mam nadzieję, że będzie Ci się podobać."
-      talkList.appendChild(liBook3);
+      liNightmare3.innerHTML = "a nocą, gdy rozpoczyna się jej panowanie, wszystkie śpią."
+      talkList.appendChild(liNightmare3);
       talkList.appendChild(br);
 
-      var liBook4 = document.createElement("li");
+      var liNightmare4 = document.createElement("li");
       var br = document.createElement("br");
-      liBook4.innerHTML = "Czy mogę Ci pomóc w czymś jeszcze?"
-      talkList.appendChild(liBook4);
+      liNightmare4.innerHTML = "Z zazdrości zamieniła się w Nightmare Moon."
+      talkList.appendChild(liNightmare4);
+      talkList.appendChild(br);
+
+      var liNightmare5 = document.createElement("li");
+      var br = document.createElement("br");
+      liNightmare5.innerHTML = "Interesuje Cię jeszcze coś?"
+      talkList.appendChild(liNightmare5);
       talkList.appendChild(br);
 
       var divAnswer1 = document.createElement("div");
       var divAnswer2 = document.createElement("div");
 
       divAnswer1.innerHTML = "To wszystko, dziękuję.";
-      divAnswer2.innerHTML = "Mam parę pytań o księżniczkę Celestię.";
+      divAnswer2.innerHTML = "Chętnie wypożyczę książkę.";
       divAnswer1.classList.add("answer");
       divAnswer1.classList.add("thats-all");
       divAnswer2.classList.add("answer");
-      divAnswer2.classList.add("celestia");
+      divAnswer2.classList.add("books");
       answerBtns.appendChild(divAnswer1);
       answerBtns.appendChild(divAnswer2);
 
@@ -458,6 +466,7 @@ $(function(){
       return false;
     })
 
+    // BOOK ANSWER 2
     $(".talking-button").on("click", ".puchar", function(){
 
       var poszukiwaniaBtn = document.querySelector(".poszukiwania");
@@ -516,6 +525,67 @@ $(function(){
       }, 1500);
       return false;
     });
+
+    // CELESTIA ANSWER 2
+
+    $(".talking-button").on("click", ".magiczna-moc", function(){
+
+      var siostraBtn = document.querySelector(".siostra");
+      var magicznaMocBtn = document.querySelector(".magiczna-moc");
+
+      siostraBtn.parentNode.removeChild(siostraBtn);
+      magicznaMocBtn.parentNode.removeChild(magicznaMocBtn);
+
+      var li = document.createElement("li");
+      li.innerHTML = "Jakie magiczne moce ma Księżniczka Celestia?";
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liMagic = document.createElement("li");
+      var br = document.createElement("br");
+      liMagic.innerHTML = "Celestia jest tak potężna, że umie panować nad cudzą magią."
+      talkList.appendChild(liMagic);
+      talkList.appendChild(br);
+
+      var liMagic2 = document.createElement("li");
+      var br = document.createElement("br");
+      liMagic2.innerHTML = "Poza tym posiada moc telekinezy,"
+      talkList.appendChild(liMagic2);
+      talkList.appendChild(br);
+
+      var liMagic3 = document.createElement("li");
+      var br = document.createElement("br");
+      liMagic3.innerHTML = "co oznacza, że potrafi podnosić przedmioty i z nich korzystać."
+      talkList.appendChild(liMagic3);
+      talkList.appendChild(br);
+
+      var liMagic4 = document.createElement("li");
+      var br = document.createElement("br");
+      liMagic4.innerHTML = "Chcesz wiedzieć coś jeszcze?"
+      talkList.appendChild(liMagic4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+
+      divAnswer1.innerHTML = "To wszystko, dziękuję.";
+      divAnswer2.innerHTML = "Chętnie wypożyczę książkę.";
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("thats-all");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("books");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+      return false;
+    })
 
 
 
