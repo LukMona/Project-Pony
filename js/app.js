@@ -219,6 +219,12 @@ $(function(){
 
   progressCircles();
 
+  function matchHeight(){
+    var highestCol = Math.max($(".col-10").height(),$(".col-1").height());
+    $(".col-1").height(highestCol);
+  };
+
+  matchHeight();
 
 
   function talkingPony(){
@@ -279,6 +285,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
+
+      matchHeight();
     });
 
     $(".talking-button").on("click", ".poszukiwania", function(){
@@ -337,6 +345,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
+
+      matchHeight();
     });
 
     $(".talking-button").on("click", ".puchar", function(){
@@ -395,6 +405,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
+
+      matchHeight();
     });
 
     // *************** CELESTIA 1 ANSWER *************************
@@ -451,6 +463,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
+
+      matchHeight();
     })
 
     $(".talking-button").on("click", ".siostra", function(){
@@ -515,6 +529,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
+
+      matchHeight();
     })
 
     $(".talking-button").on("click", ".magiczna-moc", function(){
@@ -573,6 +589,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
+
+      matchHeight();
     })
 
     // ALMOST FINISH TALK, BACK TO BOOK BUTTON
@@ -629,6 +647,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
+
+      matchHeight();
     });
 
     // ALMOST FINISH TALK, BACK TO CELESTIA BUTTON
@@ -689,6 +709,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
+
+      matchHeight();
     })
 
     //THAT'S ALL CLICK FORM
@@ -742,6 +764,8 @@ $(function(){
         scrollTop: checkPosition
       }, 1500);
 
+      matchHeight();
+
     });
 
   };
@@ -780,5 +804,4 @@ $(function(){
   }
 
   sendForm();
-
 });

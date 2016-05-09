@@ -873,3 +873,13 @@ header {
 .answer-form .error {
   color: #DF1414;
 }
+
+.footer {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #87cefa;
+}
