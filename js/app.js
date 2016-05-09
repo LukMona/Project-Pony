@@ -180,42 +180,63 @@ $(function(){
   //
   // intro();
 
-
   function progressCircles(){
 
-    $("#circle-book").circleProgress({
-      value: 0.87,
-      size: 100,
-      fill: {
-        color: "#6BC8FA"
-      }
-    });
+    $(document).scroll(function(){
 
-    $("#circle-leadership").circleProgress({
-      value: 1,
-      size: 100,
-      fill: {
-        color: "#6BC8FA"
-      }
-    });
+      function checkIfVisible(){
+        var characteristic = $(".characteristic-twilightsparkle");
+        var windowView = $(window);
 
-    $("#circle-teleportation").circleProgress({
-      value: 0.25,
-      size: 100,
-      fill: {
-        color: "#6BC8FA"
-      }
-    });
+        var docViewTop = windowView.scrollTop();
+        var docViewBottom = docViewTop + windowView.height();
 
-    $("#circle-fire").circleProgress({
-      value: 0.5,
-      size: 100,
-      fill: {
-        color: "#6BC8FA"
-      }
-    });
 
-  };
+        var elemTop = characteristic.offset().top;
+        var elemBottom = elemTop + characteristic.height();
+        // var answer = ((docViewTop < elemTop) && (docViewBottom > elemBottom));
+
+        return ((docViewTop < elemTop) && (docViewBottom > elemBottom))
+      }
+
+        checkIfVisible();
+
+        if (checkIfVisible() === true){
+          $("#circle-book").circleProgress({
+            value: 0.87,
+            size: 100,
+            fill: {
+              color: "#6BC8FA"
+            }
+          });
+
+          $("#circle-leadership").circleProgress({
+            value: 1,
+            size: 100,
+            fill: {
+              color: "#6BC8FA"
+            }
+          });
+
+          $("#circle-teleportation").circleProgress({
+            value: 0.25,
+            size: 100,
+            fill: {
+              color: "#6BC8FA"
+            }
+          });
+
+          $("#circle-fire").circleProgress({
+            value: 0.5,
+            size: 100,
+            fill: {
+              color: "#6BC8FA"
+            }
+          });
+        };
+      })
+
+    };
 
   progressCircles();
 
@@ -720,6 +741,13 @@ $(function(){
 
       Btns.parentNode.removeChild(Btns);
 
+      var li = document.createElement("li");
+      li.innerHTML = "To chyba wszystko, czego mogę się od Ciebie dowiedzieć...";
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
       var mainFunction = document.querySelector(".twilight-function");
       var div = document.createElement("div");
       var span = document.createElement("span");
@@ -787,18 +815,23 @@ $(function(){
       var messageGetInfo = message.val();
 
       if(nameGetInfo < 5){
+        console.log("Działa");
         var newElement = $("<div class='error'>Imię powinno być dłuższe niż 5 znaków</div>")
         newElement.insertAfter(name);
       };
+
       if(testEmail.test(emailGetInfo) === false ){
         var newElement = $("<div class='error'>Nieprawidłowy adres e-mail</div>")
         newElement.insertAfter(email);
       };
+
       if(messageGetInfo < 10){
+        console.log("Działa");
         var newElement = $("<div class='error'>Wiadomość powinna być dłuższa niż 10 znaków</div>")
         newElement.insertAfter(message);
       };
 
+      matchHeight();
     });
 
   }
