@@ -715,11 +715,14 @@ $(function(){
 
       div.classList.add("answer-form");
       inputName.setAttribute("type", "name");
+      inputName.setAttribute("id", "name");
       inputName.setAttribute("placeholder", "Twoje imię");
       inputMail.setAttribute("type", "mail");
+      inputMail.setAttribute("id", "mail");
       inputMail.setAttribute("placeholder", "E-mail");
+      form.setAttribute("id", "form");
       form.setAttribute("rows", "5");
-      form.setAttribute("placeholder", "Co chcesz napisać Twilight Sparkle?");
+      form.setAttribute("placeholder", "Co chcesz mi powiedzieć?");
       sendBtn.classList.add("send-button");
 
       mainFunction.appendChild(div);
@@ -739,11 +742,43 @@ $(function(){
         scrollTop: checkPosition
       }, 1500);
 
-    })
-
+    });
 
   };
 
   talkingPony();
+
+  function sendForm(){
+
+    $(".twilight-function").on("click", ".send-button", function(){
+      event.preventDefault();
+
+      var name = $("#name");
+      var email = $("#mail");
+      var message = $("#form");
+      var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+
+      var nameGetInfo = name.val();
+      var emailGetInfo = email.val();
+      var messageGetInfo = message.val();
+
+      if(nameGetInfo < 5){
+        var newElement = $("<div class='error'>Imię powinno być dłuższe niż 5 znaków</div>")
+        newElement.insertAfter(name);
+      };
+      if(testEmail.test(emailGetInfo) === false ){
+        var newElement = $("<div class='error'>Nieprawidłowy adres e-mail</div>")
+        newElement.insertAfter(email);
+      };
+      if(messageGetInfo < 10){
+        var newElement = $("<div class='error'>Wiadomość powinna być dłuższa niż 10 znaków</div>")
+        newElement.insertAfter(message);
+      };
+
+    });
+
+  }
+
+  sendForm();
 
 });

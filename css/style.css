@@ -869,3 +869,7 @@ header {
   min-height: 12px;
   cursor: pointer;
 }
+
+.answer-form .error {
+  color: #DF1414;
+}
