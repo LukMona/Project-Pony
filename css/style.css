@@ -827,3 +827,45 @@ header {
   min-width: 44px;
   min-height: 12px;
 }
+
+.answer-form {
+  padding: 2%;
+  text-align: center;
+}
+
+.answer-form span {
+  font-size: 1.5em;
+  padding: 3%;
+  margin: 3%;
+}
+
+.answer-form input {
+  padding: 2%;
+  margin: 1%;
+  width: 75%;
+}
+
+.answer-form textarea {
+  resize: none;
+  width: 75%;
+  padding: 2%;
+  margin: 2%;
+}
+
+.answer-form .send-button {
+  margin: 0 auto;
+  width: 10em;
+  height: 2em;
+  background-color: #1b3669;
+  border-radius: 2%;
+  color: #CCE6FF;
+  text-transform: uppercase;
+  display: inline-block;
+  line-height: 1.45em;
+  padding: 6px 12px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  min-width: 44px;
+  min-height: 12px;
+  cursor: pointer;
+}

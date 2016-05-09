@@ -228,7 +228,7 @@ $(function(){
     var talkList = document.querySelector(".talk");
     var answerBtns = document.querySelector(".talking-button");
 
-    // BOOK 1 ANSWER
+    // *******************BOOK ANSWER ******************
 
     bookBtn.addEventListener("click", function(event){
 
@@ -279,67 +279,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
-      return false;
     });
 
-    // CELESTIA 1 ANSWER
-
-    celestiaBtn.addEventListener("click", function(event){
-      bookBtn.parentNode.removeChild(bookBtn);
-      celestiaBtn.parentNode.removeChild(celestiaBtn);
-
-      var li = document.createElement("li");
-      li.innerHTML = "Chcę wiedzieć więcej o Księżniczce Celestii.";
-      var br = document.createElement("br");
-      li.classList.add("answer-talk");
-      talkList.appendChild(li);
-      talkList.appendChild(br);
-
-      var liCelestia = document.createElement("li");
-      var br = document.createElement("br");
-      liCelestia.innerHTML = "Jesteś u odpowiedniej osoby."
-      talkList.appendChild(liCelestia);
-      talkList.appendChild(br);
-
-      var liCelestia2 = document.createElement("li");
-      var br = document.createElement("br");
-      liCelestia2.innerHTML = "Władczyni Equestrii to moja mentorka."
-      talkList.appendChild(liCelestia2);
-      talkList.appendChild(br);
-
-      var liCelestia3 = document.createElement("li");
-      var br = document.createElement("br");
-      liCelestia3.innerHTML = "Jej postać jest taka inspirująca i tyle mogę się od niej nauczyć!"
-      talkList.appendChild(liCelestia3);
-      talkList.appendChild(br);
-
-      var liCelestia4 = document.createElement("li");
-      var br = document.createElement("br");
-      liCelestia4.innerHTML = "A Ciebie dlaczego interesuje?"
-      talkList.appendChild(liCelestia4);
-      talkList.appendChild(br);
-
-      var divAnswer1 = document.createElement("div");
-      var divAnswer2 = document.createElement("div");
-      divAnswer1.innerHTML = "Interesuje mnie jej siostra.";
-      divAnswer2.innerHTML = "Opowiedz mi o jej magicznej mocy.";
-      divAnswer1.classList.add("answer");
-      divAnswer1.classList.add("siostra");
-      divAnswer2.classList.add("answer");
-      divAnswer2.classList.add("magiczna-moc");
-      answerBtns.appendChild(divAnswer1);
-      answerBtns.appendChild(divAnswer2);
-
-
-      var checkPosition = $(".talking-button").offset().top;
-
-      $("html, body").animate({
-        scrollTop: checkPosition
-      }, 1500);
-      return false;
-    })
-
-    // BOOK ANSWER 2
     $(".talking-button").on("click", ".poszukiwania", function(){
 
       var poszukiwaniaBtn = document.querySelector(".poszukiwania");
@@ -396,10 +337,121 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
-      return false;
-    })
+    });
 
-    // CELESTIA ANSWER 2
+    $(".talking-button").on("click", ".puchar", function(){
+
+      var poszukiwaniaBtn = document.querySelector(".poszukiwania");
+      var pucharBtn = document.querySelector(".puchar");
+
+      poszukiwaniaBtn.parentNode.removeChild(poszukiwaniaBtn);
+      pucharBtn.parentNode.removeChild(pucharBtn);
+
+      var li = document.createElement("li");
+      li.innerHTML = 'Wezmę "Dzielną Do i Puchar Gryfów".';
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liBook = document.createElement("li");
+      var br = document.createElement("br");
+      liBook.innerHTML = "Doskonały wybór!"
+      talkList.appendChild(liBook);
+      talkList.appendChild(br);
+
+      var liBook2 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook2.innerHTML = "Ta książka aż pachnie przygodami."
+      talkList.appendChild(liBook2);
+      talkList.appendChild(br);
+
+      var liBook3 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook3.innerHTML = "Tylko nie próbuj tego w domu!"
+      talkList.appendChild(liBook3);
+      talkList.appendChild(br);
+
+      var liBook4 = document.createElement("li");
+      var br = document.createElement("br");
+      liBook4.innerHTML = "Czy masz jeszcze jakieś pytanie?"
+      talkList.appendChild(liBook4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+
+      divAnswer1.innerHTML = "Już wszystko wiem.";
+      divAnswer2.innerHTML = "Interesuje mnie księżniczka Celestia.";
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("thats-all");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("celestia");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+    });
+
+    // *************** CELESTIA 1 ANSWER *************************
+
+    celestiaBtn.addEventListener("click", function(event){
+
+      bookBtn.parentNode.removeChild(bookBtn);
+      celestiaBtn.parentNode.removeChild(celestiaBtn);
+
+      var li = document.createElement("li");
+      li.innerHTML = "Chcę wiedzieć więcej o Księżniczce Celestii.";
+      var br = document.createElement("br");
+      li.classList.add("answer-talk");
+      talkList.appendChild(li);
+      talkList.appendChild(br);
+
+      var liCelestia = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia.innerHTML = "Jesteś u odpowiedniej osoby."
+      talkList.appendChild(liCelestia);
+      talkList.appendChild(br);
+
+      var liCelestia2 = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia2.innerHTML = "Władczyni Equestrii to moja mentorka."
+      talkList.appendChild(liCelestia2);
+      talkList.appendChild(br);
+
+      var liCelestia3 = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia3.innerHTML = "Jej postać jest taka inspirująca i tyle mogę się od niej nauczyć!"
+      talkList.appendChild(liCelestia3);
+      talkList.appendChild(br);
+
+      var liCelestia4 = document.createElement("li");
+      var br = document.createElement("br");
+      liCelestia4.innerHTML = "A Ciebie dlaczego interesuje?"
+      talkList.appendChild(liCelestia4);
+      talkList.appendChild(br);
+
+      var divAnswer1 = document.createElement("div");
+      var divAnswer2 = document.createElement("div");
+      divAnswer1.innerHTML = "Interesuje mnie jej siostra.";
+      divAnswer2.innerHTML = "Opowiedz mi o jej magicznej mocy.";
+      divAnswer1.classList.add("answer");
+      divAnswer1.classList.add("siostra");
+      divAnswer2.classList.add("answer");
+      divAnswer2.classList.add("magiczna-moc");
+      answerBtns.appendChild(divAnswer1);
+      answerBtns.appendChild(divAnswer2);
+
+      var checkPosition = $(".talking-button").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+    })
 
     $(".talking-button").on("click", ".siostra", function(){
 
@@ -463,70 +515,7 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
-      return false;
     })
-
-    // BOOK ANSWER 2
-    $(".talking-button").on("click", ".puchar", function(){
-
-      var poszukiwaniaBtn = document.querySelector(".poszukiwania");
-      var pucharBtn = document.querySelector(".puchar");
-
-      poszukiwaniaBtn.parentNode.removeChild(poszukiwaniaBtn);
-      pucharBtn.parentNode.removeChild(pucharBtn);
-
-      var li = document.createElement("li");
-      li.innerHTML = 'Wezmę "Dzielną Do i Puchar Gryfów".';
-      var br = document.createElement("br");
-      li.classList.add("answer-talk");
-      talkList.appendChild(li);
-      talkList.appendChild(br);
-
-      var liBook = document.createElement("li");
-      var br = document.createElement("br");
-      liBook.innerHTML = "Doskonały wybór!"
-      talkList.appendChild(liBook);
-      talkList.appendChild(br);
-
-      var liBook2 = document.createElement("li");
-      var br = document.createElement("br");
-      liBook2.innerHTML = "Ta książka aż pachnie przygodami."
-      talkList.appendChild(liBook2);
-      talkList.appendChild(br);
-
-      var liBook3 = document.createElement("li");
-      var br = document.createElement("br");
-      liBook3.innerHTML = "Tylko nie próbuj tego w domu!"
-      talkList.appendChild(liBook3);
-      talkList.appendChild(br);
-
-      var liBook4 = document.createElement("li");
-      var br = document.createElement("br");
-      liBook4.innerHTML = "Czy masz jeszcze jakieś pytanie?"
-      talkList.appendChild(liBook4);
-      talkList.appendChild(br);
-
-      var divAnswer1 = document.createElement("div");
-      var divAnswer2 = document.createElement("div");
-
-      divAnswer1.innerHTML = "Już wszystko wiem.";
-      divAnswer2.innerHTML = "Interesuje mnie księżniczka Celestia.";
-      divAnswer1.classList.add("answer");
-      divAnswer1.classList.add("thats-all");
-      divAnswer2.classList.add("answer");
-      divAnswer2.classList.add("celestia");
-      answerBtns.appendChild(divAnswer1);
-      answerBtns.appendChild(divAnswer2);
-
-      var checkPosition = $(".talking-button").offset().top;
-
-      $("html, body").animate({
-        scrollTop: checkPosition
-      }, 1500);
-      return false;
-    });
-
-    // CELESTIA ANSWER 2
 
     $(".talking-button").on("click", ".magiczna-moc", function(){
 
@@ -584,7 +573,6 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
-      return false;
     })
 
     // ALMOST FINISH TALK, BACK TO BOOK BUTTON
@@ -641,7 +629,6 @@ $(function(){
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
-      return false;
     });
 
     // ALMOST FINISH TALK, BACK TO CELESTIA BUTTON
@@ -697,16 +684,62 @@ $(function(){
       answerBtns.appendChild(divAnswer1);
       answerBtns.appendChild(divAnswer2);
 
-
       var checkPosition = $(".talking-button").offset().top;
 
       $("html, body").animate({
         scrollTop: checkPosition
       }, 1500);
-      return false;
     })
 
+    //THAT'S ALL CLICK FORM
+    $(".talking-button").on("click", ".thats-all", function(){
 
+      var Btns = document.querySelector(".talking-button");
+
+      Btns.parentNode.removeChild(Btns);
+
+      var mainFunction = document.querySelector(".twilight-function");
+      var div = document.createElement("div");
+      var span = document.createElement("span");
+      var inputName = document.createElement("input");
+      var inputMail = document.createElement("input");
+      var form = document.createElement("textarea");
+      var sendBtn = document.createElement("div");
+      var br = document.createElement("br");
+      var br2 = document.createElement("br");
+      var br3 = document.createElement("br");
+      var br4 = document.createElement("br");
+
+      span.innerHTML = "Jeżeli chcesz wiedzieć więcej, możesz do mnie napisać!";
+      sendBtn.innerHTML = "Wyślij!";
+
+      div.classList.add("answer-form");
+      inputName.setAttribute("type", "name");
+      inputName.setAttribute("placeholder", "Twoje imię");
+      inputMail.setAttribute("type", "mail");
+      inputMail.setAttribute("placeholder", "E-mail");
+      form.setAttribute("rows", "5");
+      form.setAttribute("placeholder", "Co chcesz napisać Twilight Sparkle?");
+      sendBtn.classList.add("send-button");
+
+      mainFunction.appendChild(div);
+      div.appendChild(span);
+      div.appendChild(br);
+      div.appendChild(inputName);
+      div.appendChild(br2);
+      div.appendChild(inputMail);
+      div.appendChild(br3);
+      div.appendChild(form);
+      div.appendChild(br4);
+      div.appendChild(sendBtn);
+
+      var checkPosition = $(".answer-form").offset().top;
+
+      $("html, body").animate({
+        scrollTop: checkPosition
+      }, 1500);
+
+    })
 
 
   };
