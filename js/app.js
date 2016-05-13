@@ -194,7 +194,6 @@ $(function(){
 
         var elemTop = characteristic.offset().top;
         var elemBottom = elemTop + characteristic.height();
-        // var answer = ((docViewTop < elemTop) && (docViewBottom > elemBottom));
 
         return ((docViewTop < elemTop) && (docViewBottom > elemBottom))
       }
