@@ -551,10 +551,8 @@ header {
 
 @media (max-width: 767px) {
   .pony-nav {
-    height: 125px;
-    width: 150px;
     top: -25px;
-    left: 55px;
+    left: -20px;
   }
 }
 
@@ -623,7 +621,8 @@ header {
 
 @media (max-width: 767px) {
   .ponys img {
-    max-height: 100%;
+    width: 50%;
+    height: 50%;
   }
 }
 
@@ -998,14 +997,101 @@ header {
   left: 41%;
 }
 
-.twilight-teleportation .progress-radial {
-  position: relative;
+@media (max-width: 767px) {
+  .progress-radial .circle-img {
+    left: 30%;
+  }
 }
 
 .twilight-teleportation .progress-radial .circle-img {
-  position: absolute;
   top: 19%;
   left: 38%;
+}
+
+@media (max-width: 767px) {
+  .twilight-teleportation .progress-radial .circle-img {
+    left: 20%;
+  }
+}
+
+@media (max-width: 767px) {
+  .circle-animation {
+    text-align: center;
+    margin-bottom: 2%;
+    margin-right: 5%;
+  }
+  .twilight-book {
+    margin-left: 20%;
+  }
+  .twilight-teleportation {
+    clear: both;
+    margin-left: 20%;
+  }
+}
+
+.twilight-quote .bg-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.twilight-quote .bg-img .img {
+  width: 100%;
+  background-image: url("../img/twilight_quote.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+@media (max-width: 767px) {
+  .twilight-quote .bg-img .img {
+    background-attachment: scroll;
+  }
+}
+
+.twilight-quote .bg-img .img blockquote {
+  font-size: 50px;
+  font-family: "Raleway-Regular", Arial;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 150px;
+  padding-bottom: 150px;
+  text-indent: 20px;
+}
+
+@media (max-width: 767px) {
+  .twilight-quote .bg-img .img blockquote {
+    font-size: 16px;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 75px;
+    padding-bottom: 75px;
+    text-indent: 10px;
+    font-weight: 1000;
+  }
+}
+
+.twilight-quote .bg-img .img blockquote::first-letter {
+  font-size: 76px;
+}
+
+@media (max-width: 767px) {
+  .twilight-quote .bg-img .img blockquote::first-letter {
+    font-size: 22px;
+  }
+}
+
+.twilight-quote .bg-img .img span {
+  float: right;
+  font-size: 22px;
+  color: #858585;
+  font-family: "Raleway-Regular", Arial;
+}
+
+@media (max-width: 767px) {
+  .twilight-quote .bg-img .img span {
+    font-size: 14px;
+  }
 }
 
 .title-twilightsparkle {
@@ -1053,49 +1139,21 @@ header {
   text-align: center;
 }
 
-.twilight-quote .bg-img {
-  width: 100%;
-  overflow: hidden;
-}
-
-.twilight-quote .bg-img .img {
-  width: 100%;
-  background-image: url("../img/twilight_quote.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-attachment: fixed;
-}
-
-.twilight-quote .bg-img .img blockquote {
-  font-size: 50px;
-  font-family: "Raleway-Regular", Arial;
-  padding-top: 100px;
-  padding-left: 200px;
-  padding-right: 150px;
-  padding-bottom: 150px;
-  text-indent: 20px;
-}
-
-.twilight-quote .bg-img .img blockquote::first-letter {
-  font-size: 76px;
-}
-
-.twilight-quote .bg-img .img span {
-  float: right;
-  font-size: 22px;
-  color: #858585;
-  font-family: "Raleway-Regular", Arial;
-}
-
 .twilight-function .talk-with-me-header {
   text-align: center;
   padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .twilight-function .talk-with-me-header span {
   font-family: "celestia_reduxmedium", Helvetica;
   font-size: 30px;
+}
+
+@media (max-width: 767px) {
+  .twilight-function .talking-div {
+    text-align: center;
+  }
 }
 
 .twilight-function .talking-div li {
@@ -1113,6 +1171,14 @@ header {
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+  .twilight-function .talking-div li {
+    float: none;
+    text-align: center;
+    margin: 0 0 1.5em 0;
+  }
 }
 
 .twilight-function .talking-div .answer-talk {
@@ -1134,6 +1200,14 @@ header {
   min-width: 44px;
   min-height: 12px;
   float: right;
+}
+
+@media (max-width: 767px) {
+  .twilight-function .talking-div .answer-talk {
+    float: none;
+    text-align: center;
+    margin: 0 0 1.5em 0;
+  }
 }
 
 .twilight-function .talking-div .clear {
@@ -1215,6 +1289,12 @@ header {
 .footer {
   text-align: center;
   margin-top: 5%;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 12px;
+  }
 }
 
 .footer a {

@@ -199,44 +199,44 @@ $(function(){
         return ((docViewTop < elemTop) && (docViewBottom > elemBottom))
       }
 
-        checkIfVisible();
+      checkIfVisible();
 
-        if (checkIfVisible() === true){
-          $("#circle-book").circleProgress({
-            value: 0.87,
-            size: 100,
-            fill: {
-              color: "#6BC8FA"
-            }
-          });
+      if (checkIfVisible() === true){
+        $("#circle-book").circleProgress({
+          value: 0.87,
+          size: 100,
+          fill: {
+            color: "#6BC8FA"
+          }
+        });
 
-          $("#circle-leadership").circleProgress({
-            value: 1,
-            size: 100,
-            fill: {
-              color: "#6BC8FA"
-            }
-          });
+        $("#circle-leadership").circleProgress({
+          value: 1,
+          size: 100,
+          fill: {
+            color: "#6BC8FA"
+          }
+        });
 
-          $("#circle-teleportation").circleProgress({
-            value: 0.25,
-            size: 100,
-            fill: {
-              color: "#6BC8FA"
-            }
-          });
+        $("#circle-teleportation").circleProgress({
+          value: 0.25,
+          size: 100,
+          fill: {
+            color: "#6BC8FA"
+          }
+        });
 
-          $("#circle-fire").circleProgress({
-            value: 0.5,
-            size: 100,
-            fill: {
-              color: "#6BC8FA"
-            }
-          });
-        };
-      })
+        $("#circle-fire").circleProgress({
+          value: 0.5,
+          size: 100,
+          fill: {
+            color: "#6BC8FA"
+          }
+        });
+      };
+    })
 
-    };
+  };
 
   progressCircles();
 
