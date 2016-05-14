@@ -66,10 +66,6 @@ $(function(){
       }, 1500)
 
       function ponyPuff(){
-        // if(index >= 8) {
-        //   index=1;
-        // }
-        // console.log(index)
         var pony = $(".ponys").eq(index);
         var pony1 = $(".ponys").eq(index-1)
 
