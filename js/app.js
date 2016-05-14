@@ -94,6 +94,7 @@ $(function(){
     // PREV CLICK
 
     prev.on("click", function(){
+      console.log("Działa!");
       index--;
 
       ul.animate({
