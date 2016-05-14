@@ -553,6 +553,7 @@ header {
   .pony-nav {
     top: -25px;
     left: -20px;
+    pointer-events: none;
   }
 }
 
@@ -572,6 +573,7 @@ header {
 #prevPony, #nextPony {
   border-radius: 50%;
   background-color: transparent;
+  box-shadow: none;
   width: 70px;
   height: 70px;
 }
