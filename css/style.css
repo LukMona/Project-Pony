@@ -8,6 +8,7 @@
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
+  height: 95vh;
 }
 
 .grid-container .row:after, .grid-container .row:before {
@@ -551,9 +552,9 @@ header {
 
 @media (max-width: 767px) {
   .pony-nav {
+    height: 125px;
     top: -25px;
     left: -20px;
-    pointer-events: none;
   }
 }
 
@@ -582,6 +583,7 @@ header {
   #prevPony, #nextPony {
     width: 35px;
     height: 35px;
+    z-index: 10;
   }
 }
 
