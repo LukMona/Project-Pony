@@ -94,7 +94,6 @@ $(function(){
     // PREV CLICK
 
     prev.on("click", function(){
-      console.log("Działa!");
       index--;
 
       ul.animate({
@@ -825,6 +824,8 @@ $(function(){
         console.log("Działa");
         var newElement = $("<div class='error'>Wiadomość powinna być dłuższa niż 10 znaków</div>")
         newElement.insertAfter(message);
+
+      // if()
       };
 
       matchHeight();
