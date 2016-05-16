@@ -17,5 +17,3 @@ So, let's begin with all the important things I should include in my project des
 - and last, but not least: you can talk with Twilight! I'm adding lines in JavaScript and at the end there is a form, where you can write to the Pony (now I'm trying to figure out the PHP to make it happen, that's a language I need to learn by myself). The form is checking if the name and message has more than 5 and 10 characters and I put a regex to check if the mail address is right. To get the two blue sidebars to remain blue when I'm adding other lines, I've written a jQuery function that is checking the hight of the middle part of the site and fitting the sidebar's height to it.
 
 If you are wondering: is this site working on mobiles? Yes, indeed, yes, it is! I made it RWD, by adding some mediaqueries in the right places. The other thing worth mentioning: it was quite big project for me, so it was easier, because I was working with SASS (style sheet language which made it a lot of easier, thanks heaven for it!).
-
-http://lukmona.github.io/Project-Pony/
