@@ -8,7 +8,6 @@
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
-  height: 95vh;
 }
 
 .grid-container .row:after, .grid-container .row:before {
@@ -68,18 +67,6 @@
 
 .col-12 {
   width: 100%;
-}
-
-@media (max-width: 767px) {
-  .col-1 {
-    width: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .col-10 {
-    width: 100%;
-  }
 }
 
 @font-face {
@@ -552,9 +539,9 @@ header {
 
 @media (max-width: 767px) {
   .pony-nav {
-    height: 125px;
     top: -25px;
     left: -20px;
+    pointer-events: none;
   }
 }
 
@@ -583,7 +570,6 @@ header {
   #prevPony, #nextPony {
     width: 35px;
     height: 35px;
-    z-index: 10;
   }
 }
 
@@ -1026,10 +1012,12 @@ header {
   }
   .twilight-book {
     margin-left: 20%;
+    margin-right: 20%;
   }
   .twilight-teleportation {
     clear: both;
     margin-left: 20%;
+    margin-right: 20%;
   }
 }
 
@@ -1054,7 +1042,7 @@ header {
 }
 
 .twilight-quote .bg-img .img blockquote {
-  font-size: 50px;
+  font-size: 36px;
   font-family: "Raleway-Regular", Arial;
   padding-top: 100px;
   padding-left: 200px;
