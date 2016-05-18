@@ -810,7 +810,7 @@ $(function(){
       var emailGetInfo = email.val();
       var messageGetInfo = message.val();
 
-      if(nameGetInfo < 5){
+      if(nameGetInfo.length < 5){
         console.log("Działa");
         var newElement = $("<div class='error'>Imię powinno być dłuższe niż 5 znaków</div>")
         newElement.insertAfter(name);
@@ -821,13 +821,17 @@ $(function(){
         newElement.insertAfter(email);
       };
 
-      if(messageGetInfo < 10){
+      if(messageGetInfo.length < 10){
         console.log("Działa");
         var newElement = $("<div class='error'>Wiadomość powinna być dłuższa niż 10 znaków</div>")
         newElement.insertAfter(message);
       };
 
       matchHeight();
+
+      // if (nameGetInfo.length > 5 && testEmail.text(emailGetInfo) === true && messageGetInfo.length > 10){
+      //
+      // }
     });
 
   }
