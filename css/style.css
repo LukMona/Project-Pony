@@ -989,7 +989,7 @@ header {
 
 @media (max-width: 900px) {
   .progress-radial .circle-img {
-    left: 30%;
+    left: 36%;
   }
 }
 
@@ -1000,7 +1000,7 @@ header {
 
 @media (max-width: 900px) {
   .twilight-teleportation .progress-radial .circle-img {
-    left: 20%;
+    left: 28%;
   }
 }
 
