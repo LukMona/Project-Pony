@@ -213,7 +213,7 @@ $(function(){
     }
     circles();
 
-    $(document).scroll(function(){
+    $(document).one("scroll", function(){
 
       function checkIfVisible(){
         var characteristic = $(".characteristic-twilightsparkle");
