@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+$(window).load(function(){
 
   function parallaxClouds(){
 
