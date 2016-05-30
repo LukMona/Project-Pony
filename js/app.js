@@ -1,4 +1,4 @@
-$(function(){
+ $(document).load(function(){
 
   function parallaxClouds(){
 
