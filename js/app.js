@@ -173,8 +173,8 @@ $(window).load(function() {
       }
     });
   };
-  //
-  // intro();
+  
+  intro();
 
   function progressCircles(){
 
