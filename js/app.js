@@ -160,7 +160,7 @@ $(window).load(function() {
 
     $('body').chardinJs('start');
 
-    $(window).on("scroll", function(){
+    $(window).on("scroll", function(e){
       e.preventDefault();
       if($("#ponyNav").is(":visible")) {
         return ($("body").data("chardinJs")).toggle();
@@ -173,7 +173,7 @@ $(window).load(function() {
       }
     });
   };
-  
+
   intro();
 
   function progressCircles(){
